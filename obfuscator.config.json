@@ -1,0 +1,7 @@
+{
+  "compact": true,
+  "selfDefending": true,
+  "identifierNamesGenerator": "hexadecimal",
+  "stringArray": true,
+  "stringArrayRotate": true    
+}
