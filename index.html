@@ -39,6 +39,45 @@
   #overlay iframe{width:100%;height:100%;border:none;border-radius:.7rem;max-width:90vw;max-height:90vh;background:#000}
   #overlay .close{position:absolute;top:1.2rem;right:1.2rem;font-weight:800;background:#d2d2d2;color:#000;border:none;padding:.65rem 1rem;font-size:1.25rem;border-radius:.6rem;cursor:pointer;box-shadow:0 2px 6px var(--shadow);transition:background .2s,font-size .2s}
   #overlay .close:hover{background:#aaa;font-size:1.3rem}
+
+  /* ===== FOOTER ===== */
+.site‑footer{
+  background:rgba(20,22,34,.65);
+  backdrop‑filter:blur(10px);
+  border‑top:1px solid #272a3f;
+  box‑shadow:0 -2px 8px rgba(0,0,0,.4);
+}
+.footer‑inner{
+  max‑width:1200px;
+  margin:auto;
+  padding:2rem 1rem 2.5rem;
+  text‑align:center;
+  display:flex;
+  flex‑direction:column;
+  gap:1.2rem;
+}
+.footer‑inner p,
+.footer‑links a{
+  font‑size:.9rem;
+  color:#aab2ff;
+}
+.footer‑links{
+  display:flex;
+  gap:1.5rem;
+  justify‑content:center;
+  flex‑wrap:wrap;
+}
+.footer‑links a{
+  text‑decoration:none;
+  transition:opacity .2s;
+}
+.footer‑links a:hover{opacity:.75}
+.brand{
+  font‑family:'Press Start 2P',monospace;
+  font‑size:1.1rem;
+  background:linear‑gradient(90deg,#ff4d4d,#f7cb4d 60%,#59eaff);
+  -webkit‑background‑clip:text;background‑clip:text;color:transparent;
+}
 </style>
 </head>
 <body>
@@ -66,6 +105,25 @@
   <iframe id="gameFrame" loading="lazy"
           sandbox="allow-scripts allow-same-origin allow-pointer-lock allow-fullscreen"></iframe>
 </div>
+
+  <!-- ======= FOOTER ======= -->
+<footer class="site‑footer">
+  <div class="footer‑inner">
+    <p class="brand">🎮 GameHub</p>
+
+    <nav class="footer‑links">
+      <a href="#">Privacy</a>
+      <a href="#">Terms</a>
+      <a href="#">Contact</a>
+      <a href="#">GitHub</a>
+    </nav>
+
+    <p class="copyright">
+      © 2025 GameHub. Built with ❤️ for retro gamers.
+    </p>
+  </div>
+</footer>
+
 
 <script src="./dist/app.obf.js"></script>
 </body>
