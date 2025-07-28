@@ -47,36 +47,36 @@
   border‑top:1px solid #272a3f;
   box‑shadow:0 -2px 8px rgba(0,0,0,.4);
 }
+
+/* 1 )  make the inner wrapper a vertical, centered flex‑column */
 .footer‑inner{
-  max‑width:1200px;
-  margin:auto;
+  margin:auto;               /* keeps it centered in the page */
   padding:2rem 1rem 2.5rem;
-  text‑align:center;
   display:flex;
-  flex‑direction:column;
+  flex-direction:column;     /* stack brand, links, copyright */
+  align-items:center;        /* <-  centers them horizontally */
   gap:1.2rem;
+  text-align:center;         /* fallback for inline elements */
 }
-.footer‑inner p,
-.footer‑links a{
-  font‑size:.9rem;
-  color:#aab2ff;
-}
+
+/* 2 )  keep the link row centered and nicely spaced */
 .footer‑links{
   display:flex;
+  flex-wrap:wrap;
+  justify-content:center;    /* ensures row itself is centered */
   gap:1.5rem;
-  justify‑content:center;
-  flex‑wrap:wrap;
 }
-.footer‑links a{
-  text‑decoration:none;
-  transition:opacity .2s;
-}
+
+.footer‑links a,
+.footer‑inner p{font-size:.9rem;color:#aab2ff}
+.footer‑links a{text-decoration:none;transition:opacity .2s}
 .footer‑links a:hover{opacity:.75}
+
 .brand{
-  font‑family:'Press Start 2P',monospace;
-  font‑size:1.1rem;
-  background:linear‑gradient(90deg,#ff4d4d,#f7cb4d 60%,#59eaff);
-  -webkit‑background‑clip:text;background‑clip:text;color:transparent;
+  font-family:'Press Start 2P',monospace;
+  font-size:1.1rem;
+  background:linear-gradient(90deg,#ff4d4d,#f7cb4d 60%,#59eaff);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
 }
 </style>
 </head>
@@ -112,10 +112,8 @@
     <p class="brand">🎮 oldxgames</p>
 
     <nav class="footer‑links">
-      <a href="#">Privacy</a>
-      <a href="#">Terms</a>
-      <a href="#">Contact</a>
-      <a href="#">GitHub</a>
+      <a >Privacy</a>
+      <a >Contact</a>
     </nav>
 
     <p class="copyright">
